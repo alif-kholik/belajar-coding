@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>sign in</title>
+  </head>
+  <body>
+    <!-- halaman sign in -->
+    <section class="h-[100vh] max-w-[100vw] fixed top-2/4 left-2/4 -translate-y-2/4 -translate-x-2/4">
+      <div class="flex flex-col items-center md:flex-row md:justify-center h-full justify-center">
+        <div class="bg-[#ffffff] md:gap-10 flex scale-90 p-10 md:p-20 flex-col md:flex-row relative rounded-3xl">
+          <a class="bg-[#ea4c89] rounded-full w-10 h-10 flex justify-center items-center absolute top-3 right-3 hover:bg-[#ea4c89d3]" href="index.html">
+            <iconify-icon icon="material-symbols:home-outline-rounded" width="25px" style="color: white"></iconify-icon>
+          </a>
+          <div class="slideimg [&_img]:w-44 flex items-center flex-col-reverse [&_h5]:text-3xl [&_h5]:font-black [&_h5]:text-center gap-3">
+            <img src="cekcek2.png" alt="loginpage" />
+            <h5>Welcome to <br />Big Team</h5>
+          </div>
+          <div class="login flex flex-col gap-3 bg-[#ffffff] py-7 px-5 justify-center items-center rounded-3xl border-2 border-[#ffffff29] shadow-md">
+            <div class="email">
+              <h6 class="text- pb-1 text-[#ea4c89] pl-4">Email</h6>
+              <input class="px-5 py-2 w-72 rounded-full bg-[#00000005]" type="email" name="emaillogin" id="emaillogin" placeholder="example@gmail.com" />
+            </div>
+            <div class="pasword">
+              <h6 class="pb-1 text-[#ea4c89] pl-4">Password</h6>
+              <input class="px-5 py-2 w-72 rounded-full bg-[#00000005]" type="password" name="emaillogin" id="emaillogin" placeholder="Enter Your Password" />
+              <p class="text-gray-400 text-xs pt-3 px-4">Forgot Your Pasword?</p>
+            </div>
+            <div class="btn-sign-in">
+              <button class="py-2 px-28 font-reguler rounded-md border bg-[#ea4c89] border-slate-200 text-white hover:bg-[#ea4c89af]" type="button">Sign In</button>
+            </div>
+            <p class="text-gray-400 pt-5 text-xs text-center">belum punya akun? <a class="underline hover:text-black" href="signup">Register Now</a></p>
+          </div>
+          <!-- <img class="opacity-100 absolute top-0 scale-[180%] -z-1" src="bgblur.svg" alt=""> -->
+        </div>
+      </div>
+    </section>
+    <div class="background opacity-50 -z-10 absolute w-full">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </body>
+</html>

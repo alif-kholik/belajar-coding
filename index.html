@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    <script src="https://code.iconify.design/3/3.0.1/iconify.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.46.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>BELAJAR UI LAGI</title>
+  </head>
+  <body>
+    <!-- bg -->
+    <!-- navbar mobile -->
+    <div id="navbar" class="navbar flex-col right-0 bottom-0 items-end w-[50%] rounded-lg bg-white shadow-xl h-[calc(100%_-_72px)] fixed z-[100] transition-all">
+      <!-- <button id="exit-navbar-toggle"><iconify-icon class="fixed z-50 p-3 right-0" icon="material-symbols:exit-to-app" width="40px" style="color: #ea4c89;"></iconify-icon></button> -->
+      <div class="md:flex md:w-full h-full justify-center md:justify-between px-5 flex flex-col gap-32">
+        <div class="">
+          <ul class="navbarlist md:flex items-center flex flex-col gap-5">
+            <li class="hover:underline p-0">
+              <a href="#halamanawal" id="home">Home</a>
+            </li>
+            <li class="hover:underline p-0"><a href="#" id="about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#About_Us" class="dropbtn" id="products"
+                >Products
+                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+              </a>
+              <div class="dropdown-content">
+                <div id="product"><a href="#">Product</a></div>
+                <div id="product"><a href="#">Product</a></div>
+                <div id="product"><a href="#">Product</a></div>
+              </div>
+            </li>
+            <li class="hover:underline p-0"><a href="#portofolio" id="contact">Portofolio</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-3 items-center flex-col">
+          <div class="flex [&>input]:hover:block focus:[&>input]:block items-center gap-3">
+            <input class="rounded-md w-32 z-10 bg-gray-100 px-4 py-2 hidden" type="search" placeholder="find your need here" name="search" id="" />
+            <iconify-icon class="dropbtn" id="products" icon="ri:search-line" style="color: gray" width="25" height="25"></iconify-icon>
+          </div>
+          <a href="sign_in.html"><button class="h-10 px-6 font-reguler rounded-md border border-slate-200 text-gray-500" type="button">Sign In</button></a>
+          <button class="h-10 px-6 font-reguler rounded-md bg-[#EA4C89] hover:bg-[#ea4c89bb] text-white" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <nav id="navbar-tetap" class="navbar w-full flex bg-white p-2 [&_li]:p-3 items-center fixed z-40 justify-between">
+      <div class="flex p-2 items-center">
+        <a href="#" id="home"><img src="logoweb.svg" alt="" /></a>
+      </div>
+      <!-- navbar mobile -->
+      <label class="btn btn-circle swap swap-rotate !bg-[#ea4c89] !border-0 !text-white md:hidden">
+        <!-- this hidden checkbox controls the state -->
+        <input id="navbar-toggle" type="checkbox" />
+
+        <!-- hamburger icon -->
+        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" /></svg>
+
+        <!-- close icon -->
+        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+          <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+        </svg>
+      </label>
+      <div class="md:flex md:w-full gap-10 hidden md:justify-between px-5">
+        <div class="">
+          <ul class="navbarlist md:flex items-center">
+            <li class="hover:underline p-0">
+              <a href="#halamanawal" id="home">Home</a>
+            </li>
+            <li class="hover:underline p-0"><a href="#About_Us" id="about">About Us</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropbtn" id="products"
+                >Products
+                <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded"></iconify-icon>
+              </a>
+              <div class="dropdown-content">
+                <div id="product"><a href="#">Product</a></div>
+                <div id="product"><a href="#">Product</a></div>
+                <div id="product"><a href="#">Product</a></div>
+              </div>
+            </li>
+            <li class="hover:underline p-0"><a href="#portofolio" id="contact">Portofolio</a></li>
+          </ul>
+        </div>
+        <div class="flex gap-3 items-center">
+          <div class="flex [&>input]:hover:block focus:[&>input]:block items-center gap-3">
+            <input class="rounded-md w-72 z-10 bg-gray-100 px-4 py-2 hidden" type="search" placeholder="find your need here" name="search" id="" />
+            <iconify-icon class="dropbtn" id="products" icon="ri:search-line" style="color: gray" width="25" height="25"></iconify-icon>
+          </div>
+          <a href="sign_in.html"><button class="h-10 px-6 font-reguler rounded-md border border-slate-200 text-gray-500" type="button">Sign In</button></a>
+          <button class="h-10 px-6 font-reguler rounded-md bg-[#EA4C89] hover:bg-[#ea4c89bb] text-white" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </nav>
+    <!-- header -->
+    <header id="halamanawal" class="flex items-center justify-between max-w-screen-2xl mx-auto relative flex-col-reverse md:flex-row py-10">
+      <div class="title [&_h1]:font-semibold md:[&_h1]:text-5xl [&_h1]:text-3xl [&_p]:font-medium px-16 flex flex-col md:gap-5 gap-2 md:text-start text-center md:static md:bottom-[unset]">
+        <h1>Website Latihan Alif Kholik Mauluddin</h1>
+        <p>Dribble is the leading destination to find &showcase creative work and home to the world's best design professionalis Lorem Lorem ipsum.</p>
+        <div class="right-5 top-5 flex items-center justify-center md:justify-start">
+          <button class="h-10 px-6 font-reguler rounded-md bg-[#EA4C89] hover:bg-[#ea4c89bb] text-white" type="submit">Sign Up</button>
+        </div>
+      </div>
+      <div class="relative image w-[1500px] max-w-full md:top-[unset] top-5">
+        <img src="cekcek.png" alt="gambarilustrasi" />
+        <span class="absolute right-16 bottom-16 text-gray-500">Art by <a class="underline" href="#">Freepik</a></span>
+      </div>
+    </header>
+    <!-- section -->
+    <section id="About_Us" class="bg-white md:py-20 py-10">
+      <div class="font-semibold md:text-4xl text-3xl text-center">
+        <h3>Learn More <span class="text-[#EA4C89]">About Us</span></h3>
+      </div>
+      <div
+        class="grid items-stretch md:grid-cols-3 px-10 py-10 [&_div]:transition-all max-w-screen-2xl mx-auto grid-cols-1 md:gap-10 gap-10 [&_h4]:font-medium [&_p]:font-reguler [&_p]:text-gray-500 [&_h4]:text-xl [&_h4]:text-[#ea4c89] md:[&_img]:w-56 sm:[&_img]:w-96 [&>div]:text-center [&>div]:bg-white [&>div]:shadow-xl [&>div]:p-10 [&>div]:rounded-3xl [&>div]:overflow-hidden"
+      >
+        <div class="flex flex-col gap-3 justify-center items-center hover:-translate-y-6">
+          <img src="cekcek.png" alt="" />
+          <h4>The Best Editor in the World</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo doloribus amet veritatis libero non ipsa numquam suscipit commodi sunt. Mollitia voluptates officia nesciunt vitae velit alias non unde, dolore
+          </p>
+        </div>
+
+        <div class="flex flex-col shadow-xl gap-3 items-center hover:-translate-y-6 md:[&_img]:w-28 [&>img]:w-40 justify-center !bg-gray-700 md:[&_p]:text-gray-300">
+          <img src="cekcek2.png" alt="" />
+          <h4>The Best Editor in the World</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo doloribus amet veritatis libero non ipsa numquam suscipit commodi sunt. Mollitia voluptates officia nesciunt vitae velit alias non unde, dolore
+          </p>
+        </div>
+        <div class="flex flex-col gap-3 justify-center hover:-translate-y-6 items-center">
+          <img src="cekcek.png" alt="" />
+          <h4>The Best Editor in the World</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus explicabo doloribus amet veritatis libero non ipsa numquam suscipit commodi sunt. Mollitia voluptates officia nesciunt vitae velit alias non unde, dolore
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- main -->
+    <main class="md:py-12 md:px-16 flex md:justify-center px-10 py-6">
+      <div class="container flex md:gap-14 justify-center flex-col-reverse md:flex-row md:static sm:gap-0 relative">
+        <div class="md:w-[50%] w-full text-center [&_h5]:text-4xl [&_h5]:font-semibold flex flex-col gap-5 py-10 md:text-start">
+          <h5>Here's Place for All Editor in the World to learning</h5>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti facilis voluptas id dolores nobis eos. Ducimus ipsa distinctio consectetur maiores cum minima hic? Tenetur, est? Quisquam illum at veritatis. Nobis, sit. Optio
+            iusto esse nam nihil vero, eveniet fugit est!
+          </p>
+          <div class="subscribe">
+            <button class="h-10 px-6 font-reguler rounded-md bg-[#EA4C89] hover:bg-[#ea4c89bb] text-white" type="submit">Subscribe Now</button>
+          </div>
+        </div>
+        <div class="bg-[url('/img/orangkantor.jpg')] bg-center md:w-[55%] w-full h-[350px] rounded-3xl overflow-hidden sm:top-0 md:static md:top-[unset] bg-cover"></div>
+      </div>
+    </main>
+
+    <!-- navbar portofolio -->
+    <!-- content -->
+    <section id="portofolio" class="gallery bg-white p-14 [&_h4]:text-4xl [&_span]:text-[#ea4c89] [&_h4]:pb-8 [&_h4]:text-center">
+      <h4>Gallery <span>Portofolio</span></h4>
+      <footer class="bg-[#ea4c89] md:py-5 md:px-10 p-2 flex gap-4 justify-between max-h-screen-xl mb-5 rounded-xl shadow-md">
+        <div class="containerleft flex gap-10 max-w-screen-2xl">
+          <div class="dropdown flex items-center">
+            <button class="dropbtn gap-3 py-2 px-4 flex items-center font-reguler rounded-md border border-slate-200 text-white" id="products" type="button">
+              Popular
+              <iconify-icon icon="material-symbols:keyboard-arrow-down-rounded" width="22" height="22"></iconify-icon>
+            </button>
+            <div class="dropdown-content z-1 bg-white shadow-lg w-32 flex-col absolute bottom-[43px] left-0">
+              <a id="product" href="">popular</a>
+              <a id="product" href="">popular</a>
+              <a id="product" href="">popular</a>
+              <a id="product" href="">popular</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full whitespace-nowrap flex-wrap gap-3 hidden md:flex overflow-x-auto md:items-center md:justify-center">
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md text-white hover:bg-gray-100 hover:text-black" type="button">All</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Animation</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Branding</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Ilustration</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Mobile</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Print</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Product Design</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Typography</button>
+          <button class="gap-3 py-2 px-4 flex items-center font-reguler hover:rounded-md hover:bg-gray-100 text-white hover:text-black" type="button">Web Design</button>
+        </div>
+        <div class="dropdown flex items-center">
+          <button class="dropbtn gap-1 py-2 px-4 flex items-center font-reguler rounded-md border border-slate-200 text-white" id="products" type="button">
+            <iconify-icon icon="material-symbols:filter-list-rounded"></iconify-icon>Filter
+          </button>
+          <div class="dropdown-content z-1 bg-white shadow-lg w-32 flex-col absolute bottom-[43px] left-0">
+            <a id="product" href="">filter</a>
+            <a id="product" href="">filter</a>
+            <a id="product" href="">filter</a>
+            <a id="product" href="">filter</a>
+          </div>
+        </div>
+      </footer>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5">
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/4.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/2.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/3.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/4.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/5.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/6.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="text [&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+        <div class="card p-2 shadow-lg rounded-xl ring-1 ring-[#00000010]">
+          <div class="img rounded-xl overflow-hidden flex relative [&_img]:hover:scale-110 [&_img]:transition-all [&_img]:duration-1000 [&_img]:ease-in-out">
+            <img class=" " src="/card/2.jpg" alt="" />
+            <div class="absolute p-2 rounded-full bg-white w-8 h-8 flex items-center justify-center z-30 right-2 top-2">
+              <!-- <iconify-icon class="hover:text-red-500 love" icon="icon-park-outline:like" width="22px" style="color: #00000050;"></iconify-icon> -->
+              <input type="checkbox" checked="checked" id="favorite" name="favorite-checkbox" value="favorite-button" />
+              <label for="favorite" class="container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </label>
+            </div>
+          </div>
+          <div class="[&_h5]:font-semibold [&_p]:text-gray-500 [&_p]:text-sm [&_h5]:text-xl py-5 px-2 flex flex-col gap-2">
+            <h5>Lorem, ipsum dolor.</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, aut?</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<script>
+  const likeButton = document.getElementsByClassName("loveBtn");
+
+  function likeclick(element) {
+    element.setAttribute("data-icon", "icon-park-solid:like");
+    if (element.getAttribute("icon-park-solid:like")) {
+      // element.getAttribute = ("icon-park-outline:like")
+      //     element.getAttribute = ("icon-park-solid:like")
+    } else {
+    }
+  }
+
+  const navbar = document.getElementById("navbar");
+  const navbarTetap = document.getElementById("navbar-tetap");
+  const navbarToggle = document.getElementById("navbar-toggle");
+
+  navbarToggle.addEventListener("click", function () {
+    if (navbar.style.display === "block") {
+      navbar.style.display = "none";
+      // navbarTetap.style.position = "fixed";
+    } else {
+      navbar.style.display = "block";
+      // navbarTetap.style.position = "static";
+    }
+  });
+</script>
